@@ -4,13 +4,11 @@ function distanceFromEachOther(A, B, time){
   
     const speed = 10;
     const fullDistance = (A + B) * 2;
+    const firstCarCoordinates = [];
+    const secondCarCoordinates = [];
     let distance = speed * time;
   
     while (distance > fullDistance) distance -= fullDistance;
-    while (distance > fullDistance) distance -= fullDistance;
-  
-    const firstCarCoordinates = [];
-    const secondCarCoordinates = [];
   
     if (distance <= A) firstCarCoordinates.push(distance, 0);
     if ((distance > A) && (distance <= (A + B))) firstCarCoordinates.push(A, -(distance - A));
@@ -24,5 +22,4 @@ function distanceFromEachOther(A, B, time){
   
     return Math.hypot((secondCarCoordinates[0] - firstCarCoordinates[0]), (secondCarCoordinates[1] - firstCarCoordinates[1]));
   }
-  
   console.log(distanceFromEachOther(40, 30, 4));
