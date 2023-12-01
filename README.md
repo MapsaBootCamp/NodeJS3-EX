@@ -1,3 +1,5 @@
 # NodeJS3-EX
 ## practice
-### Solve 5 algorithms from the https://leetcode.com/
+
+1. Solve 5 algorithms from the https://leetcode.com/
+2. TODO App
