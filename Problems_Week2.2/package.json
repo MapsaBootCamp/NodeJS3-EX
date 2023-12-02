@@ -1,0 +1,21 @@
+{
+  "name": "problems-week2.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "p2.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "image-watermark": "^0.0.7",
+    "jimp-watermark": "^1.1.0",
+    "stream-concat": "^1.0.0",
+    "watermarkjs": "^2.1.1",
+    "zlib": "^1.0.5"
+  }
+}
