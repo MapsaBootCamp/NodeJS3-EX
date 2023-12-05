@@ -21,7 +21,7 @@ module.exports = {
     res.json(users.find((user) => user.id === +userId));
   },
   createUser: (req, res, next) => {
-    const user = { id: users.length + 1, ...req.body };
+    const user = { id: users.length + 1,isAdmin:false, ...req.body };
     logger.info(`${JSON.stringify(_.omit(user, ["password"]))} created!`);
     users.push(user);
     res.status(201).json({
