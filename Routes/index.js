@@ -1,0 +1,1 @@
+exports.fileRoutes = require("./fileRoutes");
