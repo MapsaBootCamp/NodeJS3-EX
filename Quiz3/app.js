@@ -62,7 +62,7 @@ app.delete("/users/:userId" , (req, res , next) => {
     if (user === undefined) {
         res.send("user does not exist!");
     } else {
-        const indexOfFile = user.uploadedFiles.findIndex(uploadedFileName);
+        const indexOfFile = user.uploadedFiles.findIndex((file) => file === uploadedFileName);
         if (indexOfFile === -1){
             res.send("File does not exist");
         } else {
