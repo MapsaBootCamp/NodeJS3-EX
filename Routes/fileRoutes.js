@@ -1,11 +1,12 @@
 const express = require("express");
 const multer = require("multer");
 const {fileController} = require("../controller");
-const {storage} = require("../config/mullerConfig");
+const {storage, fileFilter, limited} = require("../config/mullerConfig");
 
 const upload = multer({
   storage: storage,
-  limits: {fileSize: 12 * 1024 * 1024},
+  limits: limited,
+  fileFilter: fileFilter,
 });
 
 const app = express();

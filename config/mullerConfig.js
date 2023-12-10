@@ -1,5 +1,6 @@
 const multer = require("multer");
 const fs = require("fs");
+const path = require("path");
 
 exports.storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -13,3 +14,20 @@ exports.storage = multer.diskStorage({
     cb(null, file.fieldname + "-" + file.originalname);
   },
 });
+
+exports.fileFilter = (req, file, callback) => {
+  const allowedFileTypes = /(\.sh|\.msi|\.exe)$/;
+
+  // Check if the file extension is allowed
+  const extname = path.extname(file.originalname).toLowerCase();
+  const isAllowed = !allowedFileTypes.test(extname);
+
+  if (isAllowed) {
+    callback(null, true);
+  } else {
+    // Reject other file types
+    callback(new Error("Users cannot load executable files."), false);
+  }
+};
+
+exports.limited = {fileSize: 12 * 1024 * 1024};
