@@ -1,0 +1,1 @@
+exports.winstonConfig = require('./winstonConfig');
