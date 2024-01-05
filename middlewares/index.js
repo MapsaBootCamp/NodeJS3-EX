@@ -1,0 +1,1 @@
+exports.superAdminAuth = require('./isSuperAdminAuth.js');

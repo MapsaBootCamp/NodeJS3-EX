@@ -1,0 +1,1 @@
+exports.createToken = require('./createToken.js');
