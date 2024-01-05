@@ -1,0 +1,29 @@
+### مشاهده این که کاربر چقدر کار کرده و میزان زمانی که کار کرده چقدر بوده
+GET http://localhost:3003/users/getUsersDoneWork/1
+
+
+
+### لیست تمامی کاربران
+GET http://localhost:3003/users
+
+
+
+### لاگین و دریفات توکن
+POST   http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email" : "employee5@example.com"
+}
+
+
+
+##### چک کردن این که اگر ادمین باشد میتواند یوزر ایجاد کند
+POST http://localhost:3003/users/createUser
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRW1wbG95ZWUgNSIsInJvbGUiOlt7ImlkIjoyLCJuYW1lIjoic3VwZXJhZG1pbiJ9XSwiaWF0IjoxNzA0MjQ4ODA3fQ.wHElJ_li3S9DmuiT4Yo-H4f7er4LK3FG2k2V23uKqcg
+
+{
+  "name" : "medtttbbddeeffahdi",
+  "email" : "maaebttb3edffdi@gmail.com"
+}

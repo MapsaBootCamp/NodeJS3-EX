@@ -1,0 +1,1 @@
+exports.jwtAuth = require("./jwtAuth");
